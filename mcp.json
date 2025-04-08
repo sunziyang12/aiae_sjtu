@@ -1,0 +1,133 @@
+{
+  "mcpServers": {
+    "mediaDownloader": {
+      "enabled": true,
+      "type": "media",
+      "config": {
+        "outputPath": "public/assets/images/news",
+        "maxConcurrentDownloads": 5,
+        "retryAttempts": 3,
+        "formats": {
+          "images": {
+            "extensions": [
+              ".jpg",
+              ".png",
+              ".webp"
+            ],
+            "quality": 85,
+            "maxWidth": 1200,
+            "maxHeight": 800,
+            "format": "webp"
+          },
+          "videos": {
+            "extensions": [
+              ".mp4",
+              ".webm"
+            ],
+            "maxDuration": 300,
+            "quality": "high",
+            "format": "mp4"
+          }
+        },
+        "optimization": {
+          "compressImages": true,
+          "convertToWebP": true,
+          "generateThumbnails": true,
+          "thumbnailSizes": [
+            {
+              "width": 400,
+              "height": 300
+            },
+            {
+              "width": 800,
+              "height": 600
+            }
+          ]
+        }
+      },
+      "sources": {
+        "unsplash": {
+          "enabled": true,
+          "apiKey": "YOUR_UNSPLASH_API_KEY",
+          "endpoint": "https://api.unsplash.com/photos/random",
+          "searchParams": {
+            "orientation": "landscape",
+            "content_filter": "high"
+          }
+        },
+        "pexels": {
+          "enabled": true,
+          "apiKey": "OqmEH5v0PvGkTvrCJYASiKxqdQOlWrqtPPW7NK0TQguUMU9ytuZQjtzF",
+          "endpoint": "https://api.pexels.com/v1/search"
+        }
+      },
+      "rules": {
+        "news": {
+          "pattern": "src/pages/home/components/NewsSection.tsx",
+          "mediaTypes": [
+            "image"
+          ],
+          "categories": {
+            "赛事活动": {
+              "keywords": [
+                "competition",
+                "event",
+                "award"
+              ],
+              "preferredSource": "unsplash"
+            },
+            "创业故事": {
+              "keywords": [
+                "startup",
+                "business",
+                "innovation"
+              ],
+              "preferredSource": "pexels"
+            },
+            "政策解读": {
+              "keywords": [
+                "education",
+                "policy",
+                "government"
+              ],
+              "preferredSource": "unsplash"
+            }
+          },
+          "naming": {
+            "pattern": "news/{category}/{timestamp}-{hash}",
+            "lowercase": true
+          }
+        }
+      },
+      "monitoring": {
+        "enabled": true,
+        "checkInterval": 300,
+        "watchFiles": true,
+        "notifications": {
+          "desktop": true,
+          "log": true
+        }
+      },
+      "cache": {
+        "enabled": true,
+        "duration": "7d",
+        "maxSize": "1GB",
+        "cleanupInterval": "1d"
+      }
+    }
+  },
+  "settings": {
+    "logLevel": "info",
+    "autoStart": true,
+    "storage": {
+      "maxSize": "10GB",
+      "cleanup": {
+        "enabled": true,
+        "maxAge": "7d"
+      }
+    },
+    "pexels": {
+      "apiKey": "OqmEH5v0PvGkTvrCJYASiKxqdQOlWrqtPPW7NK0TQguUMU9ytuZQjtzF"
+    }
+  }
+}

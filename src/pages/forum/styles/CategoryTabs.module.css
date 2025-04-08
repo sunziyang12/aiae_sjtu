@@ -1,0 +1,15 @@
+.categoryTabs {
+  transition: all 0.3s ease;
+}
+
+.tabs {
+  min-height: 48px;
+}
+
+.tab {
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  opacity: 0.8;
+}

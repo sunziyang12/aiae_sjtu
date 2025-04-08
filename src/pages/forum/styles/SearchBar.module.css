@@ -1,0 +1,20 @@
+.searchBar {
+  transition: all 0.3s ease;
+}
+
+.searchInput {
+  flex: 1;
+}
+
+.filterButton,
+.sortButton {
+  min-width: 100px;
+}
+
+.sortMenu {
+  margin-top: 8px;
+}
+
+.menuItem {
+  transition: all 0.2s ease;
+}

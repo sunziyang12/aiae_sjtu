@@ -1,0 +1,77 @@
+.settingsCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #f6f9fc, #f0f4f8);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.settingsCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.settingsSection {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s;
+}
+
+.settingsSection:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.settingsSection:last-child {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  align-items: center;
+}
+
+.settingItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 8px 0;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.settingItem:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.settingItem:last-child {
+  margin-bottom: 0;
+}
+
+.settingLabel {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+}
+
+.colorPicker {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.themeModeSelect {
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.themeModeSelect:last-child {
+  margin-bottom: 0;
+}

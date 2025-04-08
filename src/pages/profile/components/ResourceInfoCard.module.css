@@ -1,0 +1,315 @@
+.root {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.root:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin-bottom: 0 !important;
+  font-weight: 600 !important;
+  color: #1976d2;
+  position: relative;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #1976d2, transparent);
+  border-radius: 3px;
+}
+
+.tabs {
+  margin-bottom: 16px;
+}
+
+.searchBox {
+  margin-bottom: 24px;
+}
+
+.searchIcon {
+  color: rgba(0, 0, 0, 0.54);
+  margin-right: 8px;
+}
+
+.resourceCard {
+  height: 100%;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.resourceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.resourceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #1976d2, #64b5f6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.resourceCard:hover::before {
+  opacity: 1;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardTitleContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cardAvatar {
+  margin-right: 12px;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.cardAvatar:hover {
+  transform: scale(1.1);
+}
+
+.badgeContent {
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cardTitle {
+  font-weight: 600 !important;
+  margin-bottom: 4px;
+  background: linear-gradient(90deg, #1976d2, #64b5f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.divider {
+  margin: 0 20px;
+  opacity: 0.6;
+}
+
+.list {
+  padding: 8px 0;
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.listItem {
+  padding: 12px 20px;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.listItem:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  border-left: 3px solid #1976d2;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemTitle {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.listItem:hover .itemTitle {
+  color: #1976d2;
+}
+
+.statusChip {
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.listItem:hover .statusChip {
+  transform: scale(1.05);
+}
+
+.fieldChip {
+  background-color: rgba(46, 125, 50, 0.1);
+  color: #2e7d32;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.listItem:hover .fieldChip {
+  background-color: rgba(46, 125, 50, 0.2);
+  transform: scale(1.05);
+}
+
+.typeChip {
+  background-color: rgba(237, 108, 2, 0.1);
+  color: #ed6c02;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.listItem:hover .typeChip {
+  background-color: rgba(237, 108, 2, 0.2);
+  transform: scale(1.05);
+}
+
+.usageContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.usageProgress {
+  flex-grow: 1;
+  height: 6px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.listItem:hover .usageProgress {
+  height: 8px;
+}
+
+.usageText {
+  min-width: 40px;
+  text-align: right;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.listItem:hover .usageText {
+  color: #1976d2;
+}
+
+.actionButton {
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: rotate(90deg);
+}
+
+.menuIcon {
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+}
+
+.menuItem:hover .menuIcon {
+  transform: translateX(3px);
+}
+
+.exportMenu {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menuItem {
+  transition: all 0.2s ease;
+}
+
+.menuItem:hover {
+  background-color: rgba(25, 118, 210, 0.08);
+}
+
+/* 响应式样式 */
+@media (max-width: 600px) {
+  .root {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .headerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title {
+    margin-bottom: 16px !important;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+
+  .searchBox {
+    margin-bottom: 16px;
+  }
+
+  .cardHeader {
+    padding: 12px 16px;
+  }
+
+  .cardAvatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .listItem {
+    padding: 10px 16px;
+  }
+}

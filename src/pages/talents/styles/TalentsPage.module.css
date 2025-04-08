@@ -1,0 +1,135 @@
+.pageContainer {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 32px 0;
+}
+
+.container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.dialog {
+  backdrop-filter: blur(8px);
+}
+
+.dialogContainer {
+  display: flex;
+  min-height: 600px;
+  max-height: 80vh;
+}
+
+.mainContent {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.talentHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dialogAvatar {
+  width: 80px !important;
+  height: 80px !important;
+  margin-right: 24px;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.actionButtons {
+  margin-bottom: 32px;
+}
+
+.rightPanel {
+  width: 400px;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.contactPanel,
+.discussionPanel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.panelHeader {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactForm {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.messageList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.messageInput {
+  padding: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 960px) {
+  .pageContainer {
+    padding: 24px 0;
+  }
+
+  .dialogContainer {
+    flex-direction: column;
+  }
+
+  .rightPanel {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .dialogAvatar {
+    width: 64px !important;
+    height: 64px !important;
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pageContainer {
+    padding: 16px 0;
+  }
+
+  .talentHeader {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+  }
+
+  .actionButtons {
+    margin-bottom: 24px;
+  }
+
+  .contactForm {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,90 @@
+.filterContainer {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 32px;
+}
+
+.filterTitle {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.filterTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #3f51b5, #7986cb);
+  border-radius: 2px;
+}
+
+.chipContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 40px;
+}
+
+.filterChip {
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  height: 32px;
+  background-color: #f8f9fa !important;
+  border: 1px solid #e9ecef !important;
+  color: #495057 !important;
+}
+
+.filterChip:hover {
+  background-color: #f0f4f8 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.selectedChip {
+  background: linear-gradient(145deg, #3f51b5, #5c6bc0) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.selectedChip:hover {
+  background: linear-gradient(145deg, #3949ab, #5c6bc0) !important;
+}
+
+@media (max-width: 960px) {
+  .filterContainer {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .filterTitle {
+    margin-bottom: 12px;
+  }
+
+  .chipContainer {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .filterContainer {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+
+  .chipContainer {
+    gap: 4px;
+  }
+
+  .filterChip {
+    font-size: 0.8125rem;
+    height: 28px;
+  }
+}

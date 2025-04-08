@@ -1,0 +1,21 @@
+.mediaPage {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.formPaper {
+  transition: all 0.3s ease;
+}
+
+.infoCard {
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.submitButton {
+  min-width: 120px;
+}

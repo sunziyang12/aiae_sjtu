@@ -1,0 +1,190 @@
+.pageContainer {
+  padding: 32px 0;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.filterSection {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 32px;
+}
+
+.filterSection :global(.MuiChip-root) {
+  height: 28px;
+  font-size: 0.8125rem;
+}
+
+.filterSection :global(.MuiChip-root:hover) {
+  background-color: #f0f7ff;
+}
+
+.filterSection :global(.MuiChip-root.Mui-selected) {
+  background-color: #1976d2;
+  color: white;
+}
+
+.filterTitle {
+  color: #2c3e50;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+}
+
+.filterTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, #1976d2, #64b5f6);
+  border-radius: 2px;
+}
+
+.investorCard {
+  background: white;
+  border-radius: 12px;
+  height: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.investorCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.cardHeader {
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cardContent {
+  padding: 20px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  margin-right: 16px;
+}
+
+.typeTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.governmentTag {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.privateEquityTag {
+  background-color: #fdf4ff;
+  color: #9333ea;
+}
+
+.incubatorTag {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+.individualTag {
+  background-color: #fff7ed;
+  color: #ea580c;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #64748b;
+}
+
+.areaChip {
+  background-color: #f8fafc !important;
+  color: #475569 !important;
+  font-size: 0.75rem !important;
+  height: 24px !important;
+}
+
+.verifiedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.dialogHeader {
+  padding: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dialogContent {
+  padding: 24px;
+}
+
+.portfolioCard {
+  padding: 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.portfolioHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.contactPanel {
+  width: 400px;
+  border-left: 1px solid #f0f0f0;
+  padding: 24px;
+}
+
+@media (max-width: 960px) {
+  .filterSection {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .filterTitle {
+    margin-bottom: 8px;
+  }
+
+  .filterSection :global(.MuiChip-root) {
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .cardHeader {
+    padding: 16px;
+  }
+
+  .cardContent {
+    padding: 16px;
+  }
+
+  .contactPanel {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #f0f0f0;
+  }
+}

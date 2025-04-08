@@ -1,0 +1,13 @@
+.header {
+  transition: all 0.3s ease;
+}
+
+.title {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+}

@@ -1,0 +1,31 @@
+/* 覆盖 react-responsive-carousel 的默认样式 */
+.carousel .control-arrow {
+  background: rgba(0, 0, 0, 0.3) !important;
+  height: 100% !important;
+  opacity: 0.8 !important;
+}
+
+.carousel .control-arrow:hover {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #fff !important;
+}
+
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid #fff !important;
+}
+
+.carousel .control-dots {
+  margin: 10px 0 !important;
+}
+
+.carousel .control-dots .dot {
+  background: #fff !important;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.carousel .control-dots .dot.selected {
+  background: #1976d2 !important;
+}

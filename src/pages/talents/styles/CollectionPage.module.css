@@ -1,0 +1,55 @@
+.pageContainer {
+  padding: 32px 0;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.cardWrapper {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.cardWrapper:hover {
+  transform: translateY(-4px);
+}
+
+.checkbox {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+
+  &:hover {
+    background-color: rgba(244, 67, 54, 0.1) !important;
+    color: #f44336;
+  }
+}
+
+@media (max-width: 600px) {
+  .pageContainer {
+    padding: 16px 0;
+  }
+
+  .header {
+    margin-bottom: 24px;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

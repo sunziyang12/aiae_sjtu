@@ -1,0 +1,47 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.createPostPaper {
+  transition: all 0.3s ease;
+}
+
+.createPostButton {
+  transition: all 0.3s ease;
+}
+
+.createPostText {
+  margin-top: 8px;
+}
+
+.sectionTitle {
+  font-weight: 600;
+}
+
+.tag {
+  transition: all 0.2s ease;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.userAvatar {
+  transition: transform 0.2s ease;
+}
+
+.userAvatar:hover {
+  transform: scale(1.1);
+}
+
+.userName {
+  font-weight: 600;
+}
+
+.followButton {
+  transition: all 0.2s ease;
+}

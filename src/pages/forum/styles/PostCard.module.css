@@ -1,0 +1,36 @@
+.postCard {
+  transition: all 0.3s ease;
+}
+
+.avatar {
+  transition: transform 0.2s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+.authorName {
+  font-weight: 600;
+}
+
+.title {
+  transition: color 0.2s ease;
+}
+
+.content {
+  line-height: 1.6;
+}
+
+.tag {
+  transition: all 0.2s ease;
+}
+
+.actionButton {
+  transition: all 0.2s ease;
+}
+
+.bookmarkButton,
+.moreButton {
+  transition: all 0.2s ease;
+} 
