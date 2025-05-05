@@ -25,7 +25,7 @@ import MediaPage from './pages/media'; // 媒体
 import ForumPage from './pages/forum'; // 论坛
 import JoinPage from './pages/join'; // 加入
 import LabPage from './pages/lab'; // 实验室
-import RegisterPage from './pages/Register'; // 注册
+import RegisterPage from './pages/register'; // 注册
 import LoginPage from './pages/login'; // 登录
 
 // 主应用程序组件，使用 React.FC 定义为无状态函数组件
@@ -46,8 +46,8 @@ const App: React.FC = () => {
             <Route path="/forum" element={<ForumPage />} /> {/* 论坛 */}
             <Route path="/join" element={<JoinPage />} /> {/* 加入 */}
             <Route path="/lab" element={<LabPage />} /> {/* 实验室 */}
-            <Route path="/Register" element={<RegisterPage />} /> {/* 注册 */}
-            <Route path="/Login" element={<LoginPage />} /> {/* 登录 */}
+            <Route path="/register" element={<RegisterPage />} /> {/* 注册 */}
+            <Route path="/login" element={<LoginPage />} /> {/* 登录 */}
           </Routes>
         </MainLayout>
       </Router>

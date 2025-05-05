@@ -16,12 +16,15 @@ export default function LoginPage() {
   
   type FormErrors = {
     email?: string;
+    phone?: string;
     password?: string;
     general?: string;
   };
 
+  const [loginMode, setLoginMode] = useState<'email' | 'phone'>('email');
   const [formData, setFormData] = useState({
     email: '',
+    phone: '',
     password: '',
   });
   const [errors, setErrors] = useState<FormErrors>({});
@@ -31,9 +34,15 @@ export default function LoginPage() {
   const validate = () => {
     let validationErrors: FormErrors = {};
     
-    // 邮箱校验逻辑
-    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
-      validationErrors.email = '请输入正确邮箱格式';
+    // 手机号/邮箱校验逻辑
+    if (loginMode === 'phone') {
+      if (!/^1[3-9]\d{9}$/.test(formData.phone)) {
+        validationErrors.phone = '请输入正确手机号';
+      }
+    } else {
+      if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
+        validationErrors.email = '请输入正确邮箱格式';
+      }
     }
     
     // 密码校验
@@ -106,22 +115,60 @@ export default function LoginPage() {
           </p>
         </div>
 
+        {/* 登录模式切换 */}
+        <div className="flex rounded-md shadow-sm mt-4">
+          <button
+            type="button"
+            onClick={() => setLoginMode('email')}
+            className={`flex-1 py-3 px-6 text-base font-medium rounded-l-lg border-2 ${loginMode === 'email' 
+              ? 'bg-blue-600 text-white border-blue-600 dark:bg-blue-700 dark:border-blue-700' 
+              : 'bg-white text-blue-600 border-blue-600 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-400'}`}
+          >
+            邮箱登录
+          </button>
+          <button
+            type="button"
+            onClick={() => setLoginMode('phone')}
+            className={`flex-1 py-3 px-6 text-base font-medium rounded-r-lg border-2 ${loginMode === 'phone' 
+              ? 'bg-blue-600 text-white border-blue-600 dark:bg-blue-700 dark:border-blue-700' 
+              : 'bg-white text-blue-600 border-blue-600 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-400'}`}
+          >
+            手机号登录
+          </button>
+        </div>
+
         <form className="mt-6 space-y-6 flex flex-col items-center" onSubmit={handleSubmit}>
           <Stack spacing={3} sx={{ width: '30%' }}>
-            {/* 邮箱输入框 */}
-            <TextField
-              required
-              fullWidth
-              id="email"
-              name="email"
-              label="邮箱地址"
-              type="email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              error={!!errors.email}
-              helperText={errors.email}
-              variant="outlined"
-            />
+            {/* 邮箱/手机号输入框 */}
+            {loginMode === 'email' ? (
+              <TextField
+                required
+                fullWidth
+                id="email"
+                name="email"
+                label="邮箱地址"
+                type="email"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                error={!!errors.email}
+                helperText={errors.email}
+                variant="outlined"
+              />
+            ) : (
+              <TextField
+                required
+                fullWidth
+                id="phone"
+                name="phone"
+                label="手机号码"
+                type="tel"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                error={!!errors.phone}
+                helperText={errors.phone}
+                variant="outlined"
+              />
+            )}
 
             {/* 密码输入框 */}
             <TextField

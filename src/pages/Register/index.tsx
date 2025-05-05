@@ -203,18 +203,18 @@ export default function RegisterPage() {
           <button
             type="button"
             onClick={() => setRegisterMode('email')}
-            className={`flex-1 py-2 px-4 text-sm font-medium rounded-l-lg border ${registerMode === 'email' 
-              ? 'bg-blue-50 border-blue-500 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' 
-              : 'bg-white border-gray-300 text-gray-700 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300'}`}
+            className={`flex-1 py-3 px-6 text-base font-medium rounded-l-lg border-2 ${registerMode === 'email' 
+              ? 'bg-blue-600 text-white border-blue-600 dark:bg-blue-700 dark:border-blue-700' 
+              : 'bg-white text-blue-600 border-blue-600 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-400'}`}
           >
             邮箱注册
           </button>
           <button
             type="button"
             onClick={() => setRegisterMode('phone')}
-            className={`flex-1 py-2 px-4 text-sm font-medium rounded-r-lg border ${registerMode === 'phone' 
-              ? 'bg-blue-50 border-blue-500 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' 
-              : 'bg-white border-gray-300 text-gray-700 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300'}`}
+            className={`flex-1 py-3 px-6 text-base font-medium rounded-r-lg border-2 ${registerMode === 'phone' 
+              ? 'bg-blue-600 text-white border-blue-600 dark:bg-blue-700 dark:border-blue-700' 
+              : 'bg-white text-blue-600 border-blue-600 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-400'}`}
           >
             手机号注册
           </button>
