@@ -59,7 +59,7 @@ import { mockInfoItems } from './data/mockData';
 import { useInfoFilter } from './hooks/useInfoFilter';
 import SubscriptionDialog, { SubscriptionSettings } from './components/SubscriptionDialog';
 
-const ITEMS_PER_PAGE = 5;
+const ITEMS_PER_PAGE = 6;
 
 export const InformationPage: React.FC = () => {
   const theme = useTheme();
