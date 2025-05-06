@@ -3,60 +3,56 @@ import { Investor, InvestorType } from '../types/investor';
 export const mockInvestors: Investor[] = [
   {
     id: 1,
-    name: '王投资',
+    name: '刘琳林',
     avatar: 'https://mui.com/static/images/avatar/1.jpg',
-    type: InvestorType.GOVERNMENT,
-    organization: '国家科技创新基金',
+    type: InvestorType.PRIVATE_EQUITY,
+    organization: '烟台源禾股权投资基金管理有限公司',
     title: '投资总监',
     stages: ['pre-a', 'a', 'b'],
-    areas: ['ai', 'biotech', 'enterprise'],
-    sizes: ['500-2000', '2000+'],
-    location: '北京',
-    description: '专注于科技创新领域的国家级投资基金，重点支持人工智能、生物科技等战略性新兴产业。',
+    areas: ['hardware', 'enterprise', 'biotech'],
+    sizes: ['2000+'],
+    location: '山东烟台',
+    description: '烟台源禾股权投资基金管理有限公司成立于2019年，关注半导体、新能源、新材料、 生物医药、先进制造等领域。',
     advantages: [
-      '国家级投资平台',
-      '资金规模大',
-      '产业资源丰富',
-      '政策支持力度强'
+      'TBD'
     ],
     portfolio: [
       {
-        name: '智能芯片科技有限公司',
+        name: '因时机器人',
         stage: 'b',
-        amount: '5000万',
-        date: '2023-06'
+        amount: '近亿人民币',
+        date: '2025-04'
       },
       {
-        name: '生物医药研发中心',
+        name: '航天极创',
         stage: 'a',
-        amount: '3000万',
-        date: '2023-03'
+        amount: '数千万人民币',
+        date: '2024-01'
       }
     ],
     contact: {
-      email: 'investment@gov-fund.com',
-      phone: '010-88886666',
-      wechat: 'govfund001'
+      email: 'ytyhzb@163.com',
+      phone: '0535-6887396'
     },
     verificationStatus: 'verified',
-    establishedYear: 2010,
-    totalInvestment: '100亿',
-    successfulExits: 15,
-    teamSize: 50,
-    website: 'www.gov-fund.com'
+    establishedYear: 2019,
+    totalInvestment: '10-20亿元人民币',
+    successfulExits: 14,
+    teamSize: 15,
+    website: 'https://www.ytyhzb.com/'
   },
   {
     id: 2,
-    name: '张创投',
+    name: '王一军',
     avatar: 'https://mui.com/static/images/avatar/2.jpg',
-    type: InvestorType.PRIVATE_EQUITY,
-    organization: '未来创投基金',
-    title: '合伙人',
-    stages: ['angel', 'pre-a', 'a'],
-    areas: ['internet', 'consumer', 'fintech'],
-    sizes: ['100-500', '500-2000'],
-    location: '上海',
-    description: '专注于互联网和消费升级领域的投资，深耕早期项目投资，注重长期价值创造。',
+    type: InvestorType.GOVERNMENT,
+    organization: '中国风险投资有限公司',
+    title: '董事',
+    stages: ['angel', 'pre-a', 'a', 'b', 'growth'],
+    areas: ['biotech', 'medical'],
+    sizes: ['2000+'],
+    location: '北京市',
+    description: '中国风险投资有限公司（简称“中国风投”）于2000年由中国民主建国会中央委员会（简称“民建中央”）发起、民建会员参股设立，是专业从事风险投资的有限责任公司。中国风投的主营业务是创业风险投资和创业风险投资基金的发起设立及管理。该基金主要投资于节能环保、新材料、高端制造、军工、轨道交通、医药医疗领域初创期、扩张期企业。中国风投在北京、深圳、杭州、宁波青岛、沈阳分别设立有人民币基金，其中包括与科技部引导基金合作设立的节能环保领域专业基金，以及与国家发改委、财政部合作设立的新材料领域专业基金。',
     advantages: [
       '投资经验丰富',
       '产业链资源完善',
@@ -65,115 +61,107 @@ export const mockInvestors: Investor[] = [
     ],
     portfolio: [
       {
-        name: '新零售科技平台',
+        name: '乘乘集团',
         stage: 'a',
-        amount: '2000万',
-        date: '2023-09'
+        amount: '超亿人民币',
+        date: '2024-12'
       },
       {
-        name: '智能支付解决方案',
-        stage: 'pre-a',
-        amount: '800万',
-        date: '2023-07'
+        name: '中科伊和',
+        stage: 'angel',
+        amount: '金额未透露',
+        date: '2023-04'
       }
     ],
     contact: {
-      email: 'partner@future-vc.com',
-      phone: '021-66668888',
+      email: 'cvc@c-vc.com.cn',
+      phone: '010-64685180',
       wechat: 'futurevc002'
     },
     verificationStatus: 'verified',
-    establishedYear: 2015,
-    totalInvestment: '30亿',
-    successfulExits: 8,
-    teamSize: 20,
-    website: 'www.future-vc.com'
+    establishedYear: 2000,
+    totalInvestment: '>20亿元人民币',
+    successfulExits: 223,
+    teamSize: 500,
+    website: 'http://www.c-vc.com.cn/'
   },
   {
     id: 3,
-    name: '李孵化',
+    name: '陆奇',
     avatar: 'https://mui.com/static/images/avatar/3.jpg',
     type: InvestorType.INCUBATOR,
-    organization: '创新工场加速器',
-    title: '总经理',
+    organization: '奇绩创坛',
+    title: '法定代表人',
     stages: ['angel', 'pre-a'],
-    areas: ['enterprise', 'hardware', 'ai'],
+    areas: ['enterprise', 'hardware', 'ai', 'consumer', 'internet'],
     sizes: ['0-100', '100-500'],
-    location: '深圳',
-    description: '提供全方位的创业服务和资源对接，帮助早期创业项目快速成长。',
+    location: '北京市',
+    description: '奇绩创坛的前身是YC中国，由YC中国创始人陆奇博士于2018年创立。2019年11月，启航了全面本地化的品牌“奇绩创坛” 原班人马，初心不变, 继续为中国创业者服务。',
     advantages: [
       '创业服务体系完善',
       '导师资源丰富',
-      '空间配套完善',
-      '政府资源对接强'
+      '空间配套完善'
     ],
     portfolio: [
       {
-        name: '智能硬件创新公司',
+        name: '偶域 Kig.Land',
         stage: 'pre-a',
-        amount: '300万',
-        date: '2023-10'
+        amount: '数百万人民币',
+        date: '2025-04'
       },
       {
-        name: '企业服务平台',
+        name: '松应科技',
         stage: 'angel',
-        amount: '100万',
-        date: '2023-08'
+        amount: '金额未透露',
+        date: '2025-03'
       }
     ],
     contact: {
-      email: 'manager@innovation-factory.com',
-      phone: '0755-88889999',
-      wechat: 'inno-factory'
+      email: 'support@miracleplus.com',
     },
     verificationStatus: 'verified',
     establishedYear: 2018,
     totalInvestment: '5亿',
-    successfulExits: 5,
+    successfulExits: 194,
     teamSize: 30,
-    website: 'www.innovation-factory.com'
+    website: 'https://www.miracleplus.com/'
   },
   {
     id: 4,
-    name: '陈天使',
+    name: '袁荣俭',
     avatar: 'https://mui.com/static/images/avatar/4.jpg',
-    type: InvestorType.INDIVIDUAL,
-    organization: '独立投资人',
-    title: '连续创业者',
+    type: InvestorType.PRIVATE_EQUITY,
+    organization: '成都文轩股权投资基金管理有限公司',
+    title: '董事长',
     stages: ['angel'],
-    areas: ['internet', 'consumer'],
-    sizes: ['0-100'],
-    location: '杭州',
-    description: '连续创业者，专注于互联网和消费领域的天使投资，提供创业经验指导。',
+    areas: ['fintech', 'hardware', 'internet', 'enterprise'],
+    sizes: ['2000+'],
+    location: '四川成都',
+    description: '文轩资本成立于2014年，目前管理规模超过10亿元人民币，包括三支私募股权基金和一支产业投资基金。主要发起股东包括：第一家A+H两地上市的出版发行企业新华文轩（0811.HK，601811.SH）、中信证券的直投机构金石投资、全球最大中文互联网门户新浪（SINA.O）、多元化发展的行业巨擘东煌企业集团等多家业界实力雄厚的企业。在私募股权方面：主要聚焦文化、教育、传媒、娱乐、消费升级；同时关注科技、高端制造等国家政策战略支持行业。产业投资方面：以股东资源为依托，围绕文化、教育、传媒、娱乐、文化旅游等方面打造专项产业基金。',
     advantages: [
-      '创业经验丰富',
-      '个人资源广泛',
-      '决策链短',
-      '贴身辅导'
+      'TBD',
     ],
     portfolio: [
       {
-        name: '社交电商平台',
-        stage: 'angel',
-        amount: '50万',
-        date: '2023-11'
+        name: '太阳井',
+        stage: 'b',
+        amount: '数千万人民币',
+        date: '2025-04'
       },
       {
-        name: '生活服务APP',
-        stage: 'angel',
-        amount: '80万',
-        date: '2023-09'
+        name: '中科生态',
+        stage: 'b',
+        amount: '金额未透露',
+        date: '2020-09'
       }
     ],
     contact: {
-      email: 'chen@angel-invest.com',
-      phone: '13888888888',
-      wechat: 'angel-chen'
+      phone: '028-85328952'
     },
     verificationStatus: 'verified',
-    establishedYear: 2020,
-    totalInvestment: '3000万',
-    successfulExits: 2,
-    website: 'www.angel-chen.com'
+    establishedYear: 2014,
+    totalInvestment: '10-47亿元人民币',
+    successfulExits: 17,
+    website: 'http://www.winsharepe.com/'
   }
 ]; 
