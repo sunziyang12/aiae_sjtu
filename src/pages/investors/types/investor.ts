@@ -36,8 +36,8 @@ export interface Investor {
     date: string;
   }>;
   contact: {
-    email: string;
-    phone: string;
+    email?: string;
+    phone?: string;
     wechat?: string;
   };
   verificationStatus: 'verified' | 'pending' | 'unverified';
